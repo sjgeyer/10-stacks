@@ -7,22 +7,22 @@ module.exports = class Stack {
     this._storage = new LinkedList();
   }
 
-  push(value) {
+  push(value) { // O(N) where N = number of nodes in list held in this._storage
     this._storage.push(value);
     return this;
   }
 
-  pop() {
+  pop() { // O(N) where N = number of nodes in list held in this._storage
     this._storage.pop();
     return this;
   }
 
-  peek() {
+  peek() { // O(1)
     if (!this._storage.tail) throw new Error('List is empty');
     return this._storage.tail;
   }
 
-  isEmpty() {
+  isEmpty() { // O(1)
     return !this._storage.head;
   }
 };

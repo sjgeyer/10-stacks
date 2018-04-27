@@ -8,7 +8,7 @@ module.exports = class LinkedList {
     this.tail = null;
   }
 
-  push(value) {
+  push(value) { // O(N) where N = number of nodes in list
     const node = new Node(value);
     if (!this.head) {
       this.head = node;
@@ -24,7 +24,7 @@ module.exports = class LinkedList {
     return this;
   }
 
-  pop() {
+  pop() { // O(N) where N = number of nodes in list
     if (!this.head) {
       throw new Error('Cannot remove item from empty list');
     }
